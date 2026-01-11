@@ -1,165 +1,215 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
+html, body {
+  height: 100%;
+}
+
+/* Desktop üçün mərkəzdə, mobil üçün aşağıda media query ilə dəyişəcəyik */
 body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(120deg, #b3e5ff, #e0f4ff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(120deg, #b3e5ff, #e0f4ff);
 }
 
+/* APP (Desktop) */
 .app {
-    width: 90%;
-    max-width: 900px;
-    height: 90vh;
-    background: #fff;
-    border-radius: 16px;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    overflow: hidden;
+  width: min(900px, 90vw);
+  height: min(700px, 90vh);
+  background: #fff;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
 }
 
+/* Top bar */
 .topbar {
-    padding: 15px;
-    background: #f2f9ff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  padding: 15px;
+  background: #f2f9ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .topbar h1 {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .topbar button {
-    border: none;
-    background: #4da6ff;
-    color: #fff;
-    padding: 6px 12px;
-    border-radius: 8px;
-    cursor: pointer;
+  border: none;
+  background: #4da6ff;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
+/* Chat area */
 .chat {
-    flex: 1;
-    padding: 15px;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
+/* Messages */
 .msg {
-    display: flex;
+  display: flex;
 }
 
 .msg.user {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .bubble {
-    max-width: 70%;
-    padding: 10px 14px;
-    border-radius: 14px;
-    font-size: 14px;
-    line-height: 1.4;
+  max-width: 70%;
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: pre-wrap;
 }
 
 .msg.bot .bubble {
-    background: #eef6ff;
-    border: 1px solid #d6ecff;
+  background: #eef6ff;
+  border: 1px solid #d6ecff;
 }
 
 .msg.user .bubble {
-    background: linear-gradient(135deg, #66b3ff, #1a8cff);
-    color: #fff;
+  background: linear-gradient(135deg, #66b3ff, #1a8cff);
+  color: #fff;
 }
 
+/* Composer */
 .composer {
-    display: flex;
-    padding: 12px;
-    gap: 10px;
-    border-top: 1px solid #eee;
+  display: flex;
+  padding: 12px;
+  gap: 10px;
+  border-top: 1px solid #eee;
+  background: #fff;
 }
 
 .composer input {
-    flex: 1;
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid #cce6ff;
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #cce6ff;
+  outline: none;
 }
 
 .composer button {
-    padding: 10px 16px;
-    border: none;
-    border-radius: 10px;
-    background: #1a8cff;
-    color: #fff;
-    cursor: pointer;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  background: #1a8cff;
+  color: #fff;
+  cursor: pointer;
 }
 
 /* 🔥 XIRDA ÜRƏKLƏR */
 .floating-hearts {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 9999;
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
 }
 
 .floating-heart {
-    position: absolute;
-    animation: float 2s ease-out forwards;
+  position: absolute;
+  animation: float 2s ease-out forwards;
 }
 
 @keyframes float {
-    0% {
-        opacity: 0;
-        transform: translateY(0);
-    }
-
-    20% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateY(-120px);
-    }
+  0% { opacity: 0; transform: translateY(0); }
+  20% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-120px); }
 }
 
 /* 🔹 Instagram dəstək hissəsi */
 .support {
-    padding: 10px 14px;
-    background: #f7fbff;
-    border-top: 1px solid #e6f2ff;
+  padding: 10px 14px;
+  background: #f7fbff;
+  border-top: 1px solid #e6f2ff;
 }
 
 .support-link {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    color: #333;
-    font-size: 13.5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #333;
+  font-size: 13.5px;
 }
 
 .support-link:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .insta-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .support-text {
-    line-height: 1.4;
+  line-height: 1.4;
 }
 
+/* ✅ MOBİL DÜZƏLİŞ (tam ekran) */
+@media (max-width: 700px) {
+  body {
+    justify-content: flex-start; /* mərkəz yox */
+    align-items: stretch;        /* tam eni tut */
+  }
+
+  .app {
+    width: 100vw;
+    height: 100dvh;        /* mobil üçün doğru hündürlük */
+    max-width: none;
+    border-radius: 0;
+  }
+
+  .topbar {
+    padding: 10px 12px;
+  }
+
+  .topbar h1 {
+    font-size: 16px;
+  }
+
+  .bubble {
+    max-width: 88%;
+    font-size: 14px;
+  }
+
+  .composer {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .composer input {
+    padding: 9px;
+  }
+
+  .composer button {
+    padding: 9px 12px;
+  }
+
+  .support {
+    padding: 8px 10px;
+  }
+
+  .support-link {
+    font-size: 12.5px;
+  }
+}
