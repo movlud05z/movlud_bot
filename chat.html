@@ -1,47 +1,52 @@
 <!DOCTYPE html>
 <html lang="az">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Movlud Bot</title>
-  <link rel="stylesheet" href="chat.css">
+
+  <!-- Cache problemi olmasın deyə v=3 -->
+  <link rel="stylesheet" href="chat.css?v=3" />
 </head>
 <body>
 
-<div class="app">
-  <header class="topbar">
-    <h1>Movlud Bot</h1>
-    <button id="clearBtn">Təmizlə</button>
-  </header>
+  <div class="app">
+    <header class="topbar">
+      <h1>Movlud Bot</h1>
+      <button id="clearBtn">Təmizlə</button>
+    </header>
 
-  <main id="chat" class="chat"></main>
+    <main id="chat" class="chat"></main>
 
-  <footer class="composer">
-    <input id="text" type="text" placeholder="Mesaj yaz...">
-    <button id="send">Göndər</button>
-  </footer>
+    <footer class="composer">
+      <input id="text" type="text" placeholder="Mesaj yaz..." autocomplete="off" />
+      <button id="send">Göndər</button>
+    </footer>
 
-  <!-- 🔹 INSTAGRAM DƏSTƏK HİSSƏSİ -->
-  <div class="support">
-    <a 
-      href="https://www.instagram.com/movlud05?igsh=MXczaTVjMGVscWJzcA==" 
-      target="_blank"
-      class="support-link"
-    >
-      <span class="insta-icon">
-        <!-- Instagram SVG logo -->
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
-          <rect x="3" y="3" width="18" height="18" rx="5" stroke="#E1306C" stroke-width="2"/>
-          <circle cx="12" cy="12" r="4" stroke="#E1306C" stroke-width="2"/>
-          <circle cx="17" cy="7" r="1.2" fill="#E1306C"/>
-        </svg>
-      </span>
-      <span class="support-text">
-        Linkə daxil olaraq bizə dəstək ola bilərsiniz. <strong>Təşəkkürlər!</strong>
-      </span>
-    </a>
+    <!-- 🔹 INSTAGRAM DƏSTƏK HİSSƏSİ -->
+    <div class="support">
+      <a
+        href="https://www.instagram.com/movlud05?igsh=MXczaTVjMGVscWJzcA=="
+        target="_blank"
+        rel="noopener noreferrer"
+        class="support-link"
+      >
+        <span class="insta-icon" aria-hidden="true">
+          <!-- Instagram SVG logo -->
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+            <rect x="3" y="3" width="18" height="18" rx="5" stroke="#E1306C" stroke-width="2"/>
+            <circle cx="12" cy="12" r="4" stroke="#E1306C" stroke-width="2"/>
+            <circle cx="17" cy="7" r="1.2" fill="#E1306C"/>
+          </svg>
+        </span>
+        <span class="support-text">
+          Linkə daxil olaraq bizə dəstək ola bilərsiniz. <strong>Təşəkkürlər!</strong>
+        </span>
+      </a>
+    </div>
   </div>
-</div>
 
-<script src="chat.js"></script>
+  <!-- Cache problemi olmasın deyə v=3 -->
+  <script src="chat.js?v=3"></script>
 </body>
 </html>
