@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(120deg, #b3e5ff, #e0f4ff);
+}
+
+.app {
+    width: 90%;
+    max-width: 900px;
+    height: 90vh;
+    background: #fff;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.topbar {
+    padding: 15px;
+    background: #f2f9ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar h1 {
+    font-size: 18px;
+}
+
+.topbar button {
+    border: none;
+    background: #4da6ff;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.chat {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.msg {
+    display: flex;
+}
+
+.msg.user {
+    justify-content: flex-end;
+}
+
+.bubble {
+    max-width: 70%;
+    padding: 10px 14px;
+    border-radius: 14px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.msg.bot .bubble {
+    background: #eef6ff;
+    border: 1px solid #d6ecff;
+}
+
+.msg.user .bubble {
+    background: linear-gradient(135deg, #66b3ff, #1a8cff);
+    color: #fff;
+}
+
+.composer {
+    display: flex;
+    padding: 12px;
+    gap: 10px;
+    border-top: 1px solid #eee;
+}
+
+.composer input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #cce6ff;
+}
+
+.composer button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 10px;
+    background: #1a8cff;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* 🔥 XIRDA ÜRƏKLƏR */
+.floating-hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.floating-heart {
+    position: absolute;
+    animation: float 2s ease-out forwards;
+}
+
+@keyframes float {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-120px);
+    }
+}
+
+/* 🔹 Instagram dəstək hissəsi */
+.support {
+    padding: 10px 14px;
+    background: #f7fbff;
+    border-top: 1px solid #e6f2ff;
+}
+
+.support-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 13.5px;
+}
+
+.support-link:hover {
+    text-decoration: underline;
+}
+
+.insta-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.support-text {
+    line-height: 1.4;
+}

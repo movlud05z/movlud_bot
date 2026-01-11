@@ -1,0 +1,27 @@
+.form-box button {
+    margin-top: 18px;
+    padding: 11px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #66b3ff, #1a8cff);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    letter-spacing: 1px;
+
+    /* İşıq effekti */
+    box-shadow:
+        0 0 8px rgba(77, 166, 255, 0.6),
+        0 0 16px rgba(77, 166, 255, 0.4),
+        0 0 24px rgba(77, 166, 255, 0.3);
+
+    transition: all 0.3s ease;
+}
+
+.form-box button:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 0 12px rgba(77, 166, 255, 0.8),
+        0 0 24px rgba(77, 166, 255, 0.6),
+        0 0 40px rgba(77, 166, 255, 0.5);
+}
